@@ -49,7 +49,6 @@ def mapper(sequence):
         for word in words:
             word = word.replace(",","")
             word = word.replace(".","")
-            word = word.replace(";","")
             word = word.lower()
             new_sequence.append((word, 1))
     return new_sequence
@@ -122,10 +121,6 @@ def create_output_directory(output_directory):
     if os.path.exists(output_directory):
         raise FileExistsError(f"The directory '{output_directory}' alredy exists.")
     os.makedirs(output_directory)
-
-
-
-
 
 #
 # Escriba la función save_output, la cual almacena en un archivo de texto llamado
