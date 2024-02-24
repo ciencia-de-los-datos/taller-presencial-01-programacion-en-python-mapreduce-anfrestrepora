@@ -15,6 +15,7 @@
 import glob
 import fileinput
 
+
 def load_input(input_directory):
 
     sequence = []
@@ -118,9 +119,6 @@ def save_output(output_directory, sequence):
         for key, value in sequence:
             file.write(f"{key}\t{value}\n")
 
-
-
-#
 # La siguiente función crea un archivo llamado _SUCCESS en el directorio
 # entregado como parámetro.
 #
@@ -141,7 +139,9 @@ def job(input_directory, output_directory):
     save_output(output_directory, sequence)
     create_marker(output_directory)
 
-job(
-    input_directory="input",
-    output_directory="output",
-    )
+if __name__ == "__main__":
+    job(
+    "input",
+    "output",
+)
+
